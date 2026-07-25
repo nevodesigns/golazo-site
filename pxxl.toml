@@ -1,6 +1,6 @@
 name = "golazo"
 installCommand = "npm install"
-startCommand = "npx serve -s . -l $PORT"
+startCommand = "npx serve public -l $PORT"
 port = 3000
 projectId = "proj_fiyacox1vrpj7wxl9a1t"
 deploymentId = "dep_yswaagf76jjr9be45fv22"
