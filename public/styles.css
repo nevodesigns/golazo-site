@@ -199,6 +199,10 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.1; }
   border: 1px solid var(--line-strong);
   background: var(--panel);
   padding: 26px 28px 24px;
+  /* Grid/flex items default to min-width:auto, so a wide pre.code would force
+     the card past the track and off-screen. min-width:0 lets the card hold the
+     track width and the code scroll inside it instead. */
+  min-width: 0;
 }
 .sheet::before {
   content: "";
@@ -246,12 +250,20 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.1; }
   border: 1px solid var(--line);
   padding: 14px 16px;
   margin: 14px 0 14px;
+  max-width: 100%;
+  box-sizing: border-box;
   overflow-x: auto;
   white-space: pre;
+  word-break: normal;
   -webkit-overflow-scrolling: touch;
 }
 .code .c { color: var(--ink-dim); }
 .code .g { color: var(--accent); }
+/* Keep the horizontal scrollbar visible so mobile users know the snippet scrolls. */
+.code { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+.code::-webkit-scrollbar { height: 8px; }
+.code::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 4px; }
+.code::-webkit-scrollbar-track { background: transparent; }
 .srclink {
   font-family: var(--mono);
   font-size: 11.5px;
@@ -498,6 +510,8 @@ footer {
   .footer-inner { flex-direction: column; align-items: stretch; }
   .title-block { margin-left: 0; width: 100%; }
   .title-block td { min-width: 0; }
+  /* Smaller code so more of each line fits before the reader has to scroll. */
+  .code { font-size: 12px; padding: 12px 13px; }
 }
 
 /* Reveal treatment: only when JS runs and motion is allowed */
