@@ -1,0 +1,4 @@
+name = "golazo"
+installCommand = "npm install"
+startCommand = "npx serve -s . -l $PORT"
+port = 3000
