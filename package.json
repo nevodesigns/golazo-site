@@ -2,7 +2,9 @@
   "name": "golazo-site",
   "private": true,
   "scripts": {
-    "start": "serve public -c ../serve.json -l $PORT"
+    "start": "serve public -c ../serve.json -l $PORT",
+    "stamp": "bash bump-cache.sh",
+    "deploy": "bash bump-cache.sh && pxxl deploy"
   },
   "dependencies": {
     "serve": "^14.2.3"
