@@ -1,9 +1,9 @@
 name = "golazo"
 installCommand = "npm install"
-startCommand = "npx serve public -l $PORT"
+startCommand = "npx serve public -c ../serve.json -l $PORT"
 port = 3000
 projectId = "proj_fiyacox1vrpj7wxl9a1t"
-deploymentId = "dep_yswaagf76jjr9be45fv22"
+deploymentId = "dep_yoticn9mlo5p5rktxwjb0"
 projectUrl = "https://golazo.pxxl.run"
-deploymentUrl = "https://pxxl.app/dashboard/projects/proj_fiyacox1vrpj7wxl9a1t/deployments/dep_yswaagf76jjr9be45fv22"
-lastDeployedAt = "2026-07-25T11:28:11.994Z"
+deploymentUrl = "https://pxxl.app/dashboard/projects/proj_fiyacox1vrpj7wxl9a1t/deployments/dep_yoticn9mlo5p5rktxwjb0"
+lastDeployedAt = "2026-07-25T12:34:59.389Z"

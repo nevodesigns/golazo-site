@@ -2,7 +2,7 @@
   "name": "golazo-site",
   "private": true,
   "scripts": {
-    "start": "serve public -l $PORT"
+    "start": "serve public -c ../serve.json -l $PORT"
   },
   "dependencies": {
     "serve": "^14.2.3"
